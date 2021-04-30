@@ -10,10 +10,10 @@ type Kind int
 
 // iota makes these 0-3
 const (
-    NaT = iota // Not a Triangle
-    Equ = iota // Equilateral Triangle
-    Iso = iota // Isoceles Triangle
-    Sca = iota // Scalene Triangle
+    NaT Kind = iota // Not a Triangle
+    Equ Kind = iota // Equilateral Triangle
+    Iso Kind = iota // Isoceles Triangle
+    Sca Kind = iota // Scalene Triangle
 )
 
 // Checks three input sides and returns the Kind of triangle
