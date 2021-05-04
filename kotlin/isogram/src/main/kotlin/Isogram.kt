@@ -1,19 +1,19 @@
 object Isogram {
 
-    val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     fun isIsogram(input: String): Boolean {
-        val alphabetMap = LinkedHashMap<Char, Int>();
+        val alphabetMap = LinkedHashMap<Char, Int>()
 
         for (i in input) {
             val u = i.toUpperCase()
 
             if (alphabet.contains(u)) {
-                alphabetMap.putIfAbsent(u, 0);
+                alphabetMap.putIfAbsent(u, 0)
             }
 
             if (alphabetMap[u] != null) {
-                alphabetMap[u] = alphabetMap[u]!! + 1;
+                alphabetMap[u] = alphabetMap[u]!! + 1
             }
         }
 

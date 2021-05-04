@@ -1,21 +1,21 @@
 object Pangram {
 
-    val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+    val alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
     fun isPangram(input: String): Boolean {
-        val alphabetMap = LinkedHashMap<Char, Int>();
+        val alphabetMap = LinkedHashMap<Char, Int>()
 
         for (letter in alphabet) {
-            alphabetMap.putIfAbsent(letter, 0);
+            alphabetMap.putIfAbsent(letter, 0)
         }
 
         for (i in input) {
             val u = i.toUpperCase()
             if (alphabetMap[u] != null) {
-                alphabetMap[u] = alphabetMap[u]!! + 1;
+                alphabetMap[u] = alphabetMap[u]!! + 1
             }
         }
 
-        return !alphabetMap.containsValue(0);
+        return !alphabetMap.containsValue(0)
     }
 }
