@@ -5,7 +5,7 @@ Exercism provides learning tracks for languages with coding problems and prompts
 
 My solutions are divided by ```{language}/{prompt}```. Some of them have short READMEs to give the idea of what to expect. Others (like Hello World) should just be intuited. [Here is my profile.](https://exercism.io/profiles/willfolsom)
 
-##### Note
+### Note
 This does not cover installation instructions, but happy to help if you have issues along the way.
 
 ---
