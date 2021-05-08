@@ -14,12 +14,9 @@ func IsIsogram(input string) bool {
 	for _, i := range input {
 		if strings.ContainsRune(ALPHABET, i) {
 			alphabetMap[i] += 1
-		}
-	}
-
-	for _, value := range alphabetMap {
-		if value > 1 {
-			return false
+			if alphabetMap[i] > 1 {
+				return false
+			}
 		}
 	}
 
