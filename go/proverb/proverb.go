@@ -7,7 +7,7 @@ func Proverb(rhyme []string) []string {
 
 	if len(rhyme) != 0 {
 		for i, item := range rhyme {
-			if i < len(rhyme) - 1 {
+			if i < len(rhyme)-1 {
 				proverb = append(proverb, getStandardLine(item, rhyme[i+1]))
 			} else {
 				proverb = append(proverb, getLastLine(rhyme[0]))

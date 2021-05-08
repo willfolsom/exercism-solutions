@@ -10,18 +10,18 @@ type Kind int
 
 // iota makes these 0-3
 const (
-    NaT Kind = iota // Not a Triangle
-    Equ Kind = iota // Equilateral Triangle
-    Iso Kind = iota // Isoceles Triangle
-    Sca Kind = iota // Scalene Triangle
+	NaT Kind = iota // Not a Triangle
+	Equ Kind = iota // Equilateral Triangle
+	Iso Kind = iota // Isoceles Triangle
+	Sca Kind = iota // Scalene Triangle
 )
 
 // Checks three input sides and returns the Kind of triangle
 func KindFromSides(a, b, c float64) Kind {
 	if (a <= 0 || b <= 0 || c <= 0) ||
-	   ((a + b < c) || (b + c < a) || (a + c < b)) ||
-	   (math.IsNaN(a) || math.IsNaN(b) || math.IsNaN(c)) ||
-	   (math.IsInf(a, 0) || math.IsInf(b, 0) || math.IsInf(c, 0)) {
+		((a+b < c) || (b+c < a) || (a+c < b)) ||
+		(math.IsNaN(a) || math.IsNaN(b) || math.IsNaN(c)) ||
+		(math.IsInf(a, 0) || math.IsInf(b, 0) || math.IsInf(c, 0)) {
 		return NaT
 	}
 
