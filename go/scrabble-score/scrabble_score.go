@@ -1,7 +1,7 @@
 // Package scrabble contains a function for determining Score
 package scrabble
 
-import s "strings"
+import "strings"
 
 const (
 	TWO   string = "DG"
@@ -14,21 +14,19 @@ const (
 
 // Score returns the Scrabble score of a word
 func Score(word string) int {
-	letters := s.Split(s.ToUpper(word), "")
-
 	score := 0
-	for _, c := range letters {
-		if s.Contains(TWO, c) {
+	for _, c := range strings.ToUpper(word) {
+		if strings.ContainsRune(TWO, c) {
 			score += 2
-		} else if s.Contains(THREE, c) {
+		} else if strings.ContainsRune(THREE, c) {
 			score += 3
-		} else if s.Contains(FOUR, c) {
+		} else if strings.ContainsRune(FOUR, c) {
 			score += 4
-		} else if s.Contains(FIVE, c) {
+		} else if strings.ContainsRune(FIVE, c) {
 			score += 5
-		} else if s.Contains(EIGHT, c) {
+		} else if strings.ContainsRune(EIGHT, c) {
 			score += 8
-		} else if s.Contains(TEN, c) {
+		} else if strings.ContainsRune(TEN, c) {
 			score += 10
 		} else {
 			score += 1
