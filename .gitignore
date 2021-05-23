@@ -3,5 +3,4 @@
 .DS_Store
 build/
 .gradle/
-gradlew.bat
 gradle/
