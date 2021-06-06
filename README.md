@@ -19,10 +19,12 @@ In individual {prompt} directories, run ```go test``` to see that they pass.
 
 ## Kotlin
 
-Copy and paste the contents of the base ```kotline/wrapper/``` directory into ```kotlin/{prompt}/gradle/wrapper/``` for whichever prompt you are trying to run. (I didn't want to check-in the jar file redundantly).
+Copy and paste the contents of the base ```kotlin/wrapper/``` directory into ```kotlin/{prompt}/gradle/wrapper/``` for whichever prompt you are trying to run. (I didn't want to check-in the jar file redundantly).
 
 Then run ```./gradlew test``` to see tests passing. Testing will add a ```build/``` and ```.gradle/``` directory.
 
 You may have to run ```chmod +x ./gradlew``` to allow yourself proper access.
+
+If on Windows, ```gradlew test``` should work, but you'll need the `.bat` which isn't in every solution.
 
 ---
