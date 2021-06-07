@@ -13,7 +13,7 @@ class DiamondPrinter {
                 if (distance > 0) {
                     spaceString = space.repeat(distance);
                 }
-                list.add(spaceString + its + spaceString);
+                list.add(spaceString + i + spaceString);
             } else {
                 d-=1;
                 spaceString = space.repeat(x);
